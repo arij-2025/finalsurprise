@@ -87,8 +87,9 @@ body {
   z-index: 10000;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 10px;
+  align-items: flex-start;
+  overflow-y:auto;
+  padding: 20px 0;
 }
 
 .modal-content {
@@ -98,23 +99,29 @@ body {
 }
 
 .modal-content img {
-  width: 100%;
-  max-height: 60vh; /* باش ما تخرجش مالشاشة طوليا */
-  object-fit: contain;
-  border-radius: 15px;
-  border: 3px solid white;
+  width: 90%;
+  max-height: 500px; /* باش ما تخرجش مالشاشة طوليا */
+  text-align:center;
+  margin:auto;
 }
+.modal-content img{
+  width:90%;
+  height:auto;
+  border-radius:15px;
+  border:4px solid white;
+  margin-bottom:20px
+}
+  
 
 .special-message {
   color: white;
-  font-size: 1.1rem;
-  margin-top: 15px;
-  line-height: 1.5;
+  font-size: 1.2rem;
+
+  line-height: 1.6;
   background: rgba(255, 20, 147, 0.3);
-  padding: 15px;
-  border-radius: 10px;
-  max-height: 200px; /* تجنب خروج النص */
-  overflow-y: auto; /* سكرول إذا الكلام برشا */
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom:50px;
 }
 
 /* القلوب تطيح */
@@ -125,3 +132,4 @@ body {
   z-index: 999;
 }
 @keyframes fall { to { transform: translateY(110vh) rotate(360deg); opacity: 0; } }
+
