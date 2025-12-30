@@ -93,20 +93,21 @@ body {
 }
 
 .modal-content {
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  width:90%;
-  max-width:500px;
-  margin:auto
+ width:90% !important;
+  max-width:500px !important;
+  margin:20px auto !important;
+  display:block !important;
+  text-align:center !important;
 }
 
 
 .modal-content img {
-  width:100%;
-  height:auto;
+  width:100% !important;
+  height:auto !important;
+  display:block !important;
+  margin:0 auto 20px auto !important;
   border-radius:15px;
-  margin-bottom:20px;
+  border:4px solid white;
   
 }
 .modal-content img{
@@ -119,14 +120,16 @@ body {
   
 
 .special-message {
+  display:block !important;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
 
-  line-height: 1.6;
+  line-height: 1.6 !important;
   background: rgba(255, 20, 147, 0.3);
-  padding: 15px;
+  padding: 15px !important;
   text-align:center;
-  width:100%;
+  width:100% !important;
+  word-wrap:break-word !important;
 }
 
 /* القلوب تطيح */
@@ -137,5 +140,6 @@ body {
   z-index: 999;
 }
 @keyframes fall { to { transform: translateY(110vh) rotate(360deg); opacity: 0; } }
+
 
 
