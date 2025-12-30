@@ -1,68 +1,35 @@
+/* الزينة متاعك: القلوب والخلفية الوردي */
 body {
   margin: 0;
-  background: #fff0f5; /* لون وردي بارد */
+  padding: 10px;
+  background: #fff0f5; /* نفس لونك الوردي البارد */
   font-family: "Arial", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
   text-align: center;
-}
-
-.twins-container {
+  overflow-x: hidden;
   display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.twin-card {
+
+.card, .twin-card, .special-card {
   background: white;
-  padding: 15px;
+  padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3); 
+  margin: 15px auto;
+  width: 90%; 
+  max-width: 350px;
 }
 
-.twin-card:hover {
-  transform: scale(1.05);
-}
-
-.twin-card img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover; /* باش التصويرة ما تتجبدش */
+img {
+  width: 100% !important;
+  height: auto !important;
   border-radius: 15px;
+  object-fit: cover;
 }
 
-.message {
-  margin-top: 15px;
-  color: #d63384;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
 
-.animate-char {
-  font-size: 2.5rem;
-  color: #ff1493;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.hidden {
-  display: none !important;
-}
-
-/* مطر القلوب */
 .heart {
   position: fixed;
   top: -10%;
@@ -71,79 +38,12 @@ body {
 }
 
 @keyframes fall {
-  to {
-    transform: translateY(110vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-/* الكارت الرابعة قبل ما تتحل */
-.special-card {
-  background: linear-gradient(45deg, #ff1493, #ff69b4);
-  border-radius: 20px;
-  padding: 20px;
-  cursor: pointer;
-  text-align: center;
-  color: white;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
+  to { transform: translateY(110vh) rotate(360deg); opacity: 0; }
 }
 
-.special-card:hover {
-  transform: translateY(-10px);
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 10000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: zoomIn 0.5s ease;
-}
-
-.modal-content {
-  width: 80%;
-  max-width: 600px;
-  text-align: center;
-}
-
-.modal-content img {
-  width: 100%;
-  border-radius: 15px;
-  border: 5px solid white;
-}
-
-.special-message {
-  color: white;
-  font-size: 1.3rem;
-  margin-top: 20px;
-  line-height: 1.6;
-  background: rgba(255, 20, 147, 0.2);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 40px;
-  cursor: pointer;
-}
-
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+.message, .special-message {
+  color: #d63384;
+  font-weight: bold;
+  font-size: 1.2rem;
+  word-wrap: break-word;
 }
