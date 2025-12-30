@@ -93,16 +93,21 @@ body {
 }
 
 .modal-content {
-  width: 95%; /* تاخذ أغلب مساحة الشاشة */
-  max-width: 500px;
-  text-align: center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width:90%;
+  max-width:500px;
+  margin:auto
 }
 
+
 .modal-content img {
-  width: 90%;
-  max-height: 500px; /* باش ما تخرجش مالشاشة طوليا */
-  text-align:center;
-  margin:auto;
+  width:100%;
+  height:auto;
+  border-radius:15px;
+  margin-bottom:20px;
+  
 }
 .modal-content img{
   width:90%;
@@ -119,9 +124,9 @@ body {
 
   line-height: 1.6;
   background: rgba(255, 20, 147, 0.3);
-  padding: 20px;
-  border-radius: 15px;
-  margin-bottom:50px;
+  padding: 15px;
+  text-align:center;
+  width:100%;
 }
 
 /* القلوب تطيح */
@@ -132,4 +137,5 @@ body {
   z-index: 999;
 }
 @keyframes fall { to { transform: translateY(110vh) rotate(360deg); opacity: 0; } }
+
 
